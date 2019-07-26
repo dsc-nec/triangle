@@ -9,7 +9,7 @@ using namespace frovedis;
 int main(int argc, char* argv[]) {
 	string path = argv[1];
 	// Input graph must be a sparse upper triangular matrix. 
-	auto U = make_crs_matrix_local_load<int,int>(path);
+	auto U = make_crs_matrix_local_loadbinary<long,int>(path);
 	cout << "Start calculation \n";
 	auto start = chrono::high_resolution_clock::now();
 	auto L = U.transpose();
